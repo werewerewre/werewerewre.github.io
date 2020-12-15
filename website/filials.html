@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<title>Компьютер изнутри</title>
+			<meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+			<link rel="stylesheet" href="../styles/tbb.css">
+			<link rel="stylesheet" href="../styles/footer b.css">
+			<link rel="stylesheet" href="../styles/menu.css">
+			<link rel="stylesheet" href="../styles/center.css">
+			<link rel="stylesheet" rev="stylesheet" type="text/css" href="styles.css"/>
+			<link rel="stylesheet" href="../styles/bootstrap.min.css">
+			<script src="../styles/jquery.min.js"></script>
+			<link rel="stylesheet" href="../styles/maps.css">
+		</head>
+		<body>
+			<div class="text">
+				<div class="container-fluid">
+					<div class="row content">
+						<nav>
+							<ul class="topmenu">
+								<li><a href="komp.html">Shop</a>
+									<ul class="submenu">
+										<li><a href="komp.html">Комплектующие</a></li>
+										<li><a href="opl.html">Оплата заказа</a></li>
+										<li><a href="kvi.html">Квитанция</a></li>
+									</ul>
+								</li>
+								<li><a href="index.html">Blog</a>
+									<ul class="submenu">
+										<li><a href="index.html">Блог</a></li>
+										<li><a href="news.html">Новости</a></li>
+										<li><a href="filials.html">Филиалы</a></li>
+									</ul>
+								</li>
+								<li><a href="help.html" class="down">Help</a></li>
+								<li><a href="in.html">sign in/up</a>
+									<ul class="submenu">
+										<li><a href="in.html">Вход</a></li>
+										<li><a href="up.html">Регистрация</a></li>
+									</ul>
+								</li>
+							</ul>
+						</nav>
+						<div class="container-fluid">
+							<div id="pButton" class="col-md-8 col-md-push-3" >
+								<div class="col-sm-9">
+									<h4><small>Последние сообщения</small></h4>
+									<hr>
+									<h2>Компьютер изнутри</h2>
+									<h5><span class="glyphicon glyphicon-time"></span> Отправлено Константин, 10.01.2020, 16:16.</h5>
+									<h5><span class="label label-primary">Компьютер</span></h5>
+									<br>
+									<div id="pButton" class="col-md-9 col-md-push-1" >
+										<div class = "row">
+											<div class = "col-sm-4">
+												<div class="tbb">
+													<div class="col-9">
+														<h4>Тут вы сможете увидеть все наши филиалы по стране</h4>
+														<div id="imap">
+															<a href="#" id="klgd">Калининград</a>
+															<a href="#" id="spb">Санкт-Петербург</a>
+															<a href="#" id="msk">Москва</a>
+															<a href="#" id="chel">Челябинск</a>
+														</div>
+														<div id="container"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>  
+									<script src="move.min.js"></script>
+									<script src="jquery-1.8.2.min.js"></script>
+									<script>
+										$(function()
+										{
+											// предварительная загрузка изображений
+											var klgd = $('<img />').attr('src','../images/klngr.png');
+											var msk = $('<img />').attr('src','../images/msk.png');
+											var spb = $('<img />').attr('src','../images/spb.png');
+											var chel = $('<img />').attr('src','../images/Chel.png');
+											$('div#imap > a').click(function(event){
+											var elId = $(this).attr('id');
+											switch(elId)
+											{
+												case 'klgd' : 
+													$('#container:not(:has(img))').append(klgd);
+												break;
+												case 'spb' :
+													$('#container:not(:has(img))').append(spb);
+												break; 
+												case 'msk' : 
+													$('#container:not(:has(img))').append(msk);
+												break; 
+												case 'chel' : 
+													$('#container:not(:has(img))').append(chel);
+												break; 
+												default: elImgURI = false;
+											}   
+											// ширина контейнера
+											var contwidth = $('#container').width();
+											var contheight = $('#container').height();
+											var w_mrg = contwidth/2 + "px";
+											var h_mrg = contheight/2 + "px";
+											$('#container').show();
+											$('#container').css({'margin-left':'-'+w_mrg});
+											event.preventDefault();
+											});
+											$('div#container').click(function(event){
+											$('#container img').remove();
+											$('#container').hide();
+											event.preventDefault();
+											});
+										});
+									</script>
+								</div>  
+							</div>				
+						</div>
+					</div>
+				</div>
+			</div>
+			<footer class="container-fluid">
+				<p>Сайт создал Кузнецов Константин</p>
+			</footer>
+		</body>
+	</html>

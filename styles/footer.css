@@ -1,0 +1,7 @@
+    footer /* Стиль "подвала" сайта */
+	{
+      background-color: #C0C0C0; /* Цвет фона */
+      color: black; /* Цвет текста в "подвале" сайта */
+      padding: 3px; /* Поля вокруг текста */
+	  text-align:  center;
+    }

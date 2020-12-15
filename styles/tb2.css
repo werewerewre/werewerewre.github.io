@@ -1,0 +1,9 @@
+   .layer1 /* Стиль основного текста */
+   {
+     width: 400px;
+    box-shadow: 7px 7px 5px rgba(0,0,0,0.6); /* Тень */
+    border-radius: 10px; /* Радиус скругления */
+    background: #C0C0C0;/* Цвет фона */
+    padding: 10px; /* Поля вокруг текста */
+    margin: 10px;
+   }
